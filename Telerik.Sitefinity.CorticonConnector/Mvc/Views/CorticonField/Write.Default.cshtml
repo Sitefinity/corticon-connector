@@ -1,0 +1,27 @@
+﻿@model Telerik.Sitefinity.CorticonConnector.Mvc.Models.CorticonFieldModel
+
+@using Telerik.Sitefinity.Frontend.Forms.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Services;
+
+
+@if (SystemManager.IsDesignMode && !SystemManager.IsPreviewMode)
+{
+    <div class="@Model.CssClass sf-fieldWrp">
+        <label>@Model.MetaField.Title</label>
+        @if (!string.IsNullOrEmpty(Model.MetaField.Title))
+        {
+            <div style="color: darkgray; font-style: italic; font-size: small">@Html.Resource("LabelVisibleOnlyInDesign")</div>
+        }
+    </div>
+}
+
+<div style="display: none">
+    <div class="@Model.CssClass sf-fieldWrp" data-sf-role="corticon-field-container">
+        <input type="@Model.InputType.ToHtmlInputType()" @Html.Raw(Model.InputType.ToHtmlInputType() == "number" ? "step='any'" : "") name="@Model.MetaField.FieldName" value="@Model.Value" data-sf-role="corticon-field-input" />
+    </div>
+</div>
+
+@Html.Script(ScriptRef.JQuery, "top", false)
+@Html.Script(Url.WidgetContent("Mvc/Scripts/CorticonField/corticon-field.js"), "bottom", false)
