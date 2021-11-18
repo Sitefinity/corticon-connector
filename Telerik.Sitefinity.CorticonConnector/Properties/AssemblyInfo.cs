@@ -10,11 +10,12 @@ using Telerik.Sitefinity.CorticonConnector;
 [assembly: AssemblyTitle("Telerik.Sitefinity.CorticonConnector")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Telerik.Sitefinity.CorticonConnector")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Progress")]
+[assembly: AssemblyProduct("Progress Sitefinity CMS")]
+[assembly: AssemblyCopyright("Copyright © 2005-2021 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
+[assembly: AssemblyTrademark("Sitefinity")]
 [assembly: AssemblyCulture("")]
+
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
